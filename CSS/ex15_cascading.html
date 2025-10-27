@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>Cascading 실습</title>
+<style>
+p {
+  color: gray; /* 5️⃣ 태그 선택자 */
+}
+
+.text {
+  color: blue; /* 4️⃣ 클래스 선택자 */
+}
+
+#special {
+  color: red !important; /* 3️⃣ ID 선택자 */
+}
+
+p {
+  color: green !important; /* 1️⃣ !important */
+}
+</style>
+</head>
+<body>
+  <p class="text" id="special">이 문장은 어떤 색으로 표시될까요?</p>
+</body>
+</html>
