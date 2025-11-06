@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox align-content 실습</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin: 24px 0 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-left: 6px solid #3498db;
+            padding-left: 10px;
+        }
+
+        /* flex 컨테이너의 공통 스타일 */
+        .flex-demo {
+            display: flex;
+            flex-wrap: wrap;              /* 여러 줄로 내려가도록 */
+            border: 2px dashed #000;
+            background: #ecf0f1;
+            width: 100%;
+            max-width: 600px;             /* 너무 넓어지지 않게 */
+            height: 600px;                /* 세로 공간을 줘서 정렬 차이를 눈으로 확인 */
+            margin-bottom: 20px;
+        }
+
+        /* 아이템 공통 스타일 */
+        .item {
+            width: 100px;
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+            border: 2px solid black;
+            margin: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            line-height: 60px; /* 세로 가운데 오도록 높이 부여 */
+            height: 60px;
+        }
+
+        /* 색상 전용 클래스 */
+        .a { background: red; }
+        .b { background: yellow; color: black; }
+        .c { background: blue; }
+        .d { background: green; }
+        .e { background: violet; color: black; }
+
+        /* align-content 옵션별 데모 클래스 */
+        .ac-stretch       { align-content: stretch; }
+        .ac-flex-start    { align-content: flex-start; }
+        .ac-center        { align-content: center; }
+        .ac-flex-end      { align-content: flex-end; }
+        .ac-space-between { align-content: space-between; }
+        .ac-space-around  { align-content: space-around; }
+
+        /* 가독성용 안내 텍스트 */
+        .desc {
+            font-size: 0.9rem;
+            font-weight: 800 ;
+            color: #080d97;
+            margin-top: -4px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>align-content 속성 실습</h1>
+    <p class="desc">
+        여러 줄이 된 flex 아이템들의 “줄 덩어리”를 부모 박스 안에서 세로 방향으로 어떻게 배치할지 정하는 속성이다<br/>
+        (= flex-wrap으로 줄바꿈이 일어날 때만 차이가 보임)
+    </p>
+
+    <h2>stretch (기본값처럼 공간을 쭉 늘려 차지)</h2>
+    <section class="flex-demo ac-stretch">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+    </section>
+
+    <h2>flex-start (윗쪽으로 몰림)</h2>
+    <section class="flex-demo ac-flex-start">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+    </section>
+
+    <h2>center (가운데로 몰림)</h2>
+    <section class="flex-demo ac-center">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+    </section>
+
+    <h2>flex-end (아래쪽으로 몰림)</h2>
+    <section class="flex-demo ac-flex-end">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+    </section>
+
+    <h2>space-between (맨 위/맨 아래 고정, 나머지는 균등하게 벌어짐)</h2>
+    <section class="flex-demo ac-space-between">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+    </section>
+
+    <h2>space-around (각 줄 위아래에 동일한 여백 분배)</h2>
+    <section class="flex-demo ac-space-around">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexbox 정렬 실습</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f7fa;
+      color: #2c3e50;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    section {
+      display: flex;
+      border: 2px dashed #333;
+      margin-bottom: 25px;
+      height: 100px;
+      background: #ecf0f1;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      margin: 5px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .a { background: red; }
+    .b { background: gold; color: black; }
+    .c { background: royalblue; }
+    .d { background: green; }
+    .e { background: violet; color: black; }
+
+    /* justify-content 예시 */
+    .flex-start { justify-content: flex-start; }
+    .center { justify-content: center; }
+    .flex-end { justify-content: flex-end; }
+    .space-between { justify-content: space-between; }
+    .space-around { justify-content: space-around; }
+
+    /* 세로 가운데 정렬도 보기 좋게 추가 */
+    section {
+      align-items: center;
+    }
+
+    /* 제목과 구분 */
+    h2 {
+      margin-bottom: 10px;
+      border-left: 6px solid #3498db;
+      padding-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>justify-content와 align-items 실습</h1>
+
+  <h2>flex-start</h2>
+  <section class="flex-start">
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+    <div class="box c">C</div>
+    <div class="box d">D</div>
+    <div class="box e">E</div>
+  </section>
+
+  <h2>center</h2>
+  <section class="center">
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+    <div class="box c">C</div>
+    <div class="box d">D</div>
+    <div class="box e">E</div>
+  </section>
+
+  <h2>flex-end</h2>
+  <section class="flex-end">
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+    <div class="box c">C</div>
+    <div class="box d">D</div>
+    <div class="box e">E</div>
+  </section>
+
+  <h2>space-between</h2>
+  <section class="space-between">
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+    <div class="box c">C</div>
+    <div class="box d">D</div>
+    <div class="box e">E</div>
+  </section>
+
+  <h2>space-around</h2>
+  <section class="space-around">
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+    <div class="box c">C</div>
+    <div class="box d">D</div>
+    <div class="box e">E</div>
+  </section>
+</body>
+</html>

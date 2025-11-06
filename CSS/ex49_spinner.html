@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>로딩 스피너</title>
+  <style>
+    body {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      background: #fff;
+      font-family: system-ui, sans-serif
+    }
+
+    .spinner {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%; /*요소를 완벽한 원으로 만듭니다*/
+      border: 6px solid #e5e7eb;
+      border-top-color: #3b82f6; /*상단 테두리만 파란색($`#3b82f6`$)으로 덮어씁니다. 
+														      이 파란색 부분이 회전하며 움직이는 것처럼 보이는 부분입니다.*/
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .spinner {
+        animation: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="spinner" role="img" aria-label="회전하는 로딩 아이콘"></div>
+</body>
+
+</html>

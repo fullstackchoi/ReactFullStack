@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>flex-basis 실습</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #8ee27f;
+      color: #890d0d;
+      padding: 30px;
+    }
+
+    .container {
+      display: flex;
+      border: 2px dashed #333;
+      background: #839296;
+      margin-bottom: 30px;
+      width: 500px;
+      height: 120px;
+    }
+
+    .item {
+      color: white;
+      text-align: center;
+      font-size: 1.2rem;
+      border: 2px solid black;
+      margin: 5px;
+      padding: 10px 0;
+    }
+
+    .a { background: #e67e22; flex-basis: 800px; }
+    .b { background: #9b59b6; flex-basis: 400px; }
+    .c { background: #1abc9c; flex-basis: 400px; }
+  </style>
+</head>
+<body>
+  <h2>flex-basis 예제</h2>
+  <p>각 아이템의 기본 너비를 다르게 지정한 예제다.</p>
+
+  <div class="container">
+    <div class="item a">basis: 900px</div>
+    <div class="item b">basis: 200px</div>
+    <div class="item c">basis: 300px</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>flex-shrink 실습</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f5f7fa;
+      color: #2c3e50;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      border: 2px dashed #333;
+      background: #ecf0f1;
+      margin-bottom: 30px;
+      width: 600px;
+    }
+
+    .item {
+      width: 300px;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.5rem;
+      border: 2px solid black;
+      margin: 5px;
+    }
+
+    .a { background: #e74c3c; flex-shrink: 0; } /* 줄어들지 않음 */
+    .b { background: #27ae60; flex-shrink: 1; } /* 기본값 */
+    .c { background: #3498db; flex-shrink: 3; } /* 더 많이 줄어듦 */
+  </style>
+</head>
+<body>
+  <h2>flex-shrink 예제</h2>
+  <p>창 크기를 줄여보면 각 박스의 축소 비율이 다르게 작동한다.</p>
+
+  <div class="container">
+    <div class="item a">shrink: 0</div>
+    <div class="item b">shrink: 1</div>
+    <div class="item c">shrink: 3</div>
+  </div>
+</body>
+</html>
