@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Cascading 실습</title>
-<style>
-p {
-  color: gray; /* 5️⃣ 태그 선택자 */
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: grey;
+        }
 
-.text {
-  color: blue; /* 4️⃣ 클래스 선택자 */
-}
+        .text{
+            color: blue;
+        }
 
-#special {
-  color: red !important; /* 3️⃣ ID 선택자 */
-}
+        #special{
+            color : red;
+        }
 
-p {
-  color: green !important; /* 1️⃣ !important */
-}
-</style>
+        /* !important : 모든 우선순위를 무시하고 가장 강력하게 적용 */
+        h1{
+            color: green !important;
+        }
+    </style>
 </head>
 <body>
-  <p class="text" id="special">이 문장은 어떤 색으로 표시될까요?</p>
+    <h1 class="text" id="special">이 문장은 어떤색으로 표시될 까요??</h1>
 </body>
 </html>

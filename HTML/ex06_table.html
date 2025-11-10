@@ -7,52 +7,37 @@
 </head>
 <body>
     <table border="1">
-        <tr>
-            <td> 1행 1열
-            </td>
-            <td> 1행 2열
-            </td>
-            <td> 1행 3열
-            </td>
-            <td> 1행 4열
-            </td>
-            <td> 1행 5열
-            </td>
+        <tr> <!-- 1행 -->
+            <td>1행 1열</td>
+            <td>1행 2열</td>
         </tr>
-
-        <tr>
-            <td> 2행 1열
-            </td>
-            <td> 2행 2열
-            </td>
-            <td> 2행 3열
-            </td>
-            <td> 2행 4열
-            </td>
-            <td> 2행 5열
-            </td>
+        <tr> <!-- 2행 -->
+            <td>2행 1열</td>
+            <td>2행 2열</td>
         </tr>
-
-
     </table>
-
     <hr>
-    
     <h1>테이블 열 합치기</h1>
-
     <table border="1">
         <tr>
-            <td>메뉴판</td>
+            <td colspan="3">메뉴판</td>
         </tr>
-
         <tr>
             <td>짜장면</td>
             <td>짬뽕</td>
             <td>탕수육</td>
         </tr>
-        
-    </tabel>
-
-
+    </table>
+    <hr>
+    <h1>테이블 행 합치기</h1>
+    <table border="1">
+        <tr>
+            <td rowspan="2">메뉴판</td>
+            <td>짜장면</td>
+        </tr>
+        <tr>
+            <td>짬뽕</td>
+        </tr>
+    </table>
 </body>
 </html>

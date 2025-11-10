@@ -1,27 +1,32 @@
 .box{
     width: 100px;
-    height: 100px;
-    text-align: center;
-    color: white;
-    border: 2px solid black;
+    height : 100px;
+    text-align : center;
+    color:white;
+    border : 2px solid black;
     margin: 10px;
 }
 
 .a{
-  background-color: yellowgreen;
+    background-color: yellowgreen;
 }
+
 .b{
-  background-color: violet;
+    background-color : violet;
 }
+
 .c{
-  background-color: cornflowerblue;
+    background : cornflowerblue;
 }
+
 .d{
-  background-color: orange;
+    background-color: orange;
 }
+
 .e{
-  background-color: tomato;
+    background-color : tomato;
 }
+
 .f{
-  background-color: tan;
+    background : tan;
 }
