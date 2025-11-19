@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 전위연산자
+        // 증감을 한 후에 대입이 이루어 진다.
+        let x = 10;
+        let result1 = ++x;
+        console.log(result1);
+        console.log(x);
+
+        // 후위연산자
+        // 대입을 한 후에 증감이 이루어 진다.
+        let y = 10;
+        let result2 = y++;
+        console.log(result2);
+        console.log(y);   //증감이 반영되어 출력이 된다.
+
+        let a = 5;
+        let b = a++;
+        let c = b;
+        console.log(`a:${a}, b:${b}, c:${c}`);
+       
+        
+
+
+    </script>
+</body>
+</html>

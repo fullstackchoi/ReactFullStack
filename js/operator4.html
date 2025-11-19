@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 비교 연산자
+        // 두 값을 비교하여 ture, false값을 반환한다.
+
+        let a = 10;
+        let b = 5;
+
+        let greater = a > b;
+        console.log(greater);
+
+
+            let x = 5;
+            let y = "5";
+
+            let looseEqual = x == y;
+            console.log(looseEqual);  //true
+            let strictEqual = x === y;
+            console.log(strictEqual);    //false
+            let looseNot = x != y;
+            console.log(looseNot);    //false
+            let stricjNot = x !== y;
+            console.log(stricjNot);     //true
+
+            // 문자열의 비교 문자열은 유니코드 순서로 비교된다.사전순으로 뒤에 나오는게 값이 크다
+
+            let s1 = "circle";
+            let s2 = "banana";
+            let strCompare1 = s1 < s2;
+            console.log(strCompare1);
+
+            let l1 = 1;
+            let l2 = "Hello";
+            let result3 = l1 || l2;
+            console.log(`result3 : ${result3}`);
+    </script>
+</body>
+</html>

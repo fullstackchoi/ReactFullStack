@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1. 명시적 형변화
+        // 형변환 함수를 이용한다
+        // 명시적 타입으 데이터를 정수로 바꿀 때 Number(데이터)
+        console.log(typeof Number("123"));          //123(number타입)
+        console.log(typeof Number("3.14"));         //3.14(number)타입
+        console.log(typeof Number("     10     ")); //10(양쪽 공백을 무시)
+        console.log(typeof Number("abc"));          //NaN
+        console.log(typeof Number(""));             //0
+        // console.log(Number(ture));               //1
+        // console.log(Number(false));              //0
+
+        //parseInt()   /   parseFloat()
+        //숫자(앞)+문자(뒤)로 조합된 문자열에서 숫자 부분만 앞에서부터 잘라서 숫자로 만든다.
+        console.log(parseInt("123px"));
+        //문자(앞)+숫자(뒤)로 조합된 문자열로 자동 형변환되기 때문에 NaN 으로 출력된다.
+        console.log(parseInt("abc123"));
+
+        // 자바스크립트가 연산을 수행하기 위해 타입을 자동으로 바꾸는 형변환
+        // 편리하기도 하지만 버그의 원인이 되기도 한다
+        // 문자열 + 숫자 ===> 문자열
+        console.log("10"+20);
+        console.log(10+"20");
+        console.log("Hello"+1);
+
+        // -, *, /는 숫자연산을시도한다.
+        console.log("10"-2);
+        console.log(10*"20");
+        console.log("10원"-2);     //NaN
+    </script>
+</body>
+</html>
